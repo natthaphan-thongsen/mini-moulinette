@@ -1,6 +1,9 @@
 #!/bin/bash
 
-source ~/mini-moulinette/mini-moul/config.sh
+# locate pwd
+HERE=$(cd "$(dirname "$BASH_SOURCE")"; cd -P "$(dirname "$(readlink "$BASH_SOURCE" || echo .)")"; pwd)
+
+source $HERE/mini-moul/config.sh
 # assignment name
 assignment=NULL
 
